@@ -62,7 +62,7 @@ Visualization Manager:
           Value: true
         slider_link:
           Value: true
-        world_link:
+        world:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -70,7 +70,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        world_link:
+        world:
           base_link:
             slider_link:
               arm_link:
@@ -116,7 +116,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        world_link:
+        world:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -131,7 +131,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: world_link
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -181,18 +181,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.5926406383514404
-        Y: 1.1354364156723022
-        Z: 0.44092077016830444
+        X: 0.8181929588317871
+        Y: 0.9922736883163452
+        Z: 0.1761845350265503
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6097981929779053
+      Pitch: 0.35979729890823364
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.653613090515137
+      Yaw: 5.068626880645752
     Saved: ~
 Window Geometry:
   Displays:

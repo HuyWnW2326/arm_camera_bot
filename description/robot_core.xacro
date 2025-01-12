@@ -18,16 +18,23 @@
     <material name="black">
         <color rgba="0 0 0 1"/>
     </material>
+s
+    <material name="green">
+        <color rgba="0 1 0 1" />
+    </material>
+
+    <material name="red">
+        <color rgba="1 0 0 1" />
+    </material>
+
 
     <!-- WORLD LINK-->
-    <link name="world_link">
-    
-    </link>
+    <link name="world"></link>
 
     <!-- BASE JOINT-->
 
     <joint name="base_joint" type="fixed">
-        <parent link="world_link"/>
+        <parent link="world"/>
         <child link="base_link"/>
         <origin xyz="1.5 1 0" rpy="0 0 0"/>
     </joint>
@@ -40,7 +47,7 @@
             <geometry>
                 <box size="2.5 1.5 0.1"/>
             </geometry>
-            <material name="blue"/>
+            <material name="green"/>
         </visual>
         <collision>
             <origin xyz="0 0 0.05"/>
@@ -61,6 +68,7 @@
         <origin xyz="-1.25 0 0.1" rpy="0 0 0"/>
         <limit lower="0" upper="2" velocity="100" effort="100"/>
         <axis xyz="1 0 0"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
 
     <!-- SLIDER LINK-->
@@ -71,7 +79,7 @@
                 <box size="0.5 0.25 0.15"/>
             </geometry>
             <origin xyz="0 0 0.075"/>
-            <material name="black"/>
+            <material name="blue"/>
         </visual>
         <collision>
             <geometry>
@@ -92,6 +100,7 @@
         <origin xyz="0.25 0 0.15" rpy="0 0 0"/>
         <limit lower="0" upper="${pi/2}" velocity="100" effort="100"/>
         <axis xyz="0 -1 0"/>
+        <dynamics damping="10.0" friction="10.0"/>
     </joint>
 
     <!-- ARM LINK-->
@@ -153,5 +162,7 @@
             <origin xyz="0.045 0 0" rpy="0 0 0"/>
         </xacro:inertial_box>
     </link>
+
+    <xacro:include filename="example_gazebo.xacro" /> 
 
 </robot>
